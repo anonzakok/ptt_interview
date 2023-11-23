@@ -100,7 +100,7 @@ function Dashboard(props) {
   };
 
   return (
-    <div style={{ padding: 10 }}>
+    <div className="p-1">
       <div className={"flex w-full justify-between"}>
         {userDetails.userType === "admin" ? (
           <p>
@@ -170,9 +170,9 @@ function Dashboard(props) {
         {userDetails.userType === "admin" && (
           <Column width={80} fixed="right">
             <HeaderCell>...</HeaderCell>
-            <Cell style={{ padding: "6px" }}>
+            <Cell>
               {(rowData) => (
-                <Button appearance="link" onClick={() => handleOpen(rowData)}>
+                <Button className="p-0" appearance="link" onClick={() => handleOpen(rowData)}>
                   Edit
                 </Button>
               )}

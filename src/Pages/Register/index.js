@@ -30,7 +30,7 @@ function RegisterPage(props) {
   return (
     <div
       className={
-        "min-h-screen w-full flex justify-center items-center col-gap-3"
+        "min-h-screen w-full flex justify-center items-center col-gap-3 p-2"
       }
     >
       <div className={"w-auto"}>
