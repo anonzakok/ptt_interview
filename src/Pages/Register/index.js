@@ -54,7 +54,7 @@ function RegisterPage(props) {
               <label htmlFor="phoneNumber">Phone number</label>
               <Input
                 size="md"
-                placeholder="XXXXXXXXXX"
+                placeholder=""
                 maxLength={10}
                 id="phoneNumber"
                 value={phoneNumber}
