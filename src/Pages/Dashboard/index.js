@@ -85,12 +85,16 @@ function Dashboard(props) {
   const handleClose = () => setOpen(false);
 
   const handleUpdateSeatNo = (id, seatNo) => {
-    const updateIndex = userList.findIndex((e) => e.id === id);
-    if (userList[updateIndex]) {
-      userList[updateIndex].seatNo = seatNo;
-      editSeatNo(dispatch, userDetails);
+    if(userList.filter((e)=> e.seatNo.toLowerCase() === seatNo.toLowerCase()).length > 0) {
+      alert('มีผู้ใช้ที่นั้งนี้แล้ว')
+    }else{
+      const updateIndex = userList.findIndex((e) => e.id === id);
+      if (userList[updateIndex]) {
+        userList[updateIndex].seatNo = seatNo;
+        editSeatNo(dispatch, userDetails);
+      }
+      handleClose();
     }
-    handleClose();
   };
 
   const { Column, HeaderCell, Cell } = Table;
